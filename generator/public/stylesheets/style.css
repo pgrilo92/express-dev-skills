@@ -1,4 +1,8 @@
+*{
+  box-sizing: border-box;
+}
 body {
+  text-align: center;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
