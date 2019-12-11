@@ -4,7 +4,15 @@
     <body>
         <%- include('../layouts/header') %>
         <h1> Skills</h1>
-
+        <div class="list-group">
+        <% skills.forEach((s, idx) => {%>
+            <a href="#" class="list-group-item list-group-item-action">
+                <%= s.languages %>
+                - 
+                <%= s.framework %>
+            </a>
+        <% })%>
+        </div>
         <%- include('../layouts/footer') %>
     </body>
 </html>

@@ -8,8 +8,8 @@ function getAll() {
     return skills
 }
 
-function getOne() {
-    return skills.find(skill => skill.id === id)
+function getOne(skill, id) {
+    return skill[id]
 }
 
 module.exports = {getAll, getOne}
