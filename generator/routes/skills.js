@@ -4,7 +4,12 @@ const skillsController = require('../controllers/skills')
 
 /* GET users listing. */
 router.get('/', skillsController.index)
-
+router.get('/new', skillsController.new)
 router.get('/:id', skillsController.show)
-  
+router.get('/:id/edit', skillsController.edit)
+router.post('/', skillsController.create)
+router.get('/:id', skillsController.delete)
+router.put('/:id', skillsController.update)
+
+
 module.exports = router;

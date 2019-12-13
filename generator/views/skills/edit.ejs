@@ -6,13 +6,11 @@
 
         <h1>Skills</h1>
         <h1>Languages <%= skill.languages %></h1>
-        <h1> Frameworks <%= skill.frameworks %></h1>
-
-        <a class="btn btn-primary" href="/skills/<%= skillId %>/edit" role="button">Edit</a>
+        <h1> Frameworks <%= skill.frameworks %></h1>  
         <form action="/skills/<%= skillId %>?_method=DELETE"
             class="delete-form" method="POST">
             <button type="submit" class="btn-danger">Delete</button>
-        </form>    
+        </form>
 
         <%- include('../layouts/footer') %>
     </body>
