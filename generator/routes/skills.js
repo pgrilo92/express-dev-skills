@@ -8,7 +8,7 @@ router.get('/new', skillsController.new)
 router.get('/:id', skillsController.show)
 router.get('/:id/edit', skillsController.edit)
 router.post('/', skillsController.create)
-router.get('/:id', skillsController.delete)
+router.delete('/:id', skillsController.delete)
 router.put('/:id', skillsController.update)
 
 

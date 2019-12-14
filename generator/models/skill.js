@@ -1,7 +1,7 @@
 let skills = [
-    {languages: 'javascript', framework: 'express', id: 'a1'},
-    {languages: 'python', framework: 'django', id: 'b2'},
-    {languages: 'ruby', framework: 'rubyonrails', id: 'c6'}
+    {languages: 'javascript', frameworks: 'express'},
+    {languages: 'python', framework: 'django'},
+    {languages: 'ruby', framework: 'rubyonrails'}
 ]
 
 function getAll() {
@@ -12,12 +12,12 @@ function getOne(id) {
     return skills[id]
 }
 
-function create(languages, framework) {
-    skills.push({languages, framework})
+function create(languages, frameworks) {
+    skills.push({languages, frameworks})
 }
 
 function deleteOne(id) {
-    skills.splice[id, 1]
+    skills.splice(id, 1)
 }
 
 function update(id, skill) {

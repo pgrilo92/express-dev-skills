@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+    <%- include('../layouts/head') %>
     <body>
+        <%- include('../layouts/header') %>
         <h1> Skills</h1>
         <div class="list-group">
             <% skills.forEach((s, idx) => { %>
-                <li>
-                    <a href="/skills/<%= idx %>" class="list-group-item list-group-item-action">
-                        <%= s.languages %>
-                        -
-                        <%= s.framework %>
-                        
-                    </a>
-                    <form action="/todos/<%= idx %>?_method=DELETE"
-                        class="delete-form" method="POST">
-                        <button type="submit">X</button>
-                    </form>
-                </li>
+                <a href="/skills/<%= idx %>" class="list-group-item list-group-item-action">
+                    <%= s.languages %>
+                    -
+                    <%= s.frameworks %>
+                    
+                </a>
+                <form action="/skills/<%= idx %>?_method=DELETE"
+                    class="delete-form" method="POST">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
             <% })%>
+            <a href="/skills/new" class="btn btn-outline-primary" role="button">Add a Skill</a>
         </div>
+        <%- include('../layouts/footer') %>
     </body>
 </html>

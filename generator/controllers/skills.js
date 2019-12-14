@@ -23,7 +23,7 @@ const newSkill = (req, res) => {
 }
 
 const create = (req, res) => {
-    Skill.create(req.body.skill),
+    Skill.create(req.body.languages, req.body.frameworks),
     res.redirect('/skills')
 }
 
